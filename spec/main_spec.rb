@@ -1,7 +1,6 @@
 describe 'reverter' do
     before do
-      `echo "building"`
-      # Run build
+      `rm -rf main && gcc -o main main.c`
     end
     
     def run_args(args)
