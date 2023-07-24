@@ -15,6 +15,6 @@ jobs:
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: '3.0'
-    - run: bundle install --path vendor/bundle 
+    - run: bundle install
     - name: run tests
       run: bundle exec rspec
