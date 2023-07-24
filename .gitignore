@@ -6,6 +6,7 @@
 
 # Unignore all dirs
 !*/
+Gemfile
 
 # Created by https://www.toptal.com/developers/gitignore/api/ruby,c,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=ruby,c,visualstudiocode
