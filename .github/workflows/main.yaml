@@ -13,6 +13,8 @@ jobs:
     - name: build
       run: gcc -o main main.c
     - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.0'
     - run: bundle install --path vendor/bundle 
     - name: run tests
       run: bundle exec rspec
