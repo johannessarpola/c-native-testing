@@ -35,8 +35,7 @@ describe 'reverter' do
         "hello"
       ])
       expect(result).to match_array([
-        "Original string: hello",
-        "Reversed string: olleh"
+        "olleh"
       ])
     end
     it 'reverts a string in interactive' do
@@ -45,8 +44,7 @@ describe 'reverter' do
       ])
       expect(result).to match_array([
         "Enter a string to reverse:",
-        "Original string: hello",
-        "Reversed string: olleh"
+        "olleh"
       ])
     end
   end
