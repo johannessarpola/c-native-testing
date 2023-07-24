@@ -6,6 +6,8 @@
 
 # Unignore all dirs
 !*/
+
+# Unignore Gemfile
 Gemfile
 
 # Created by https://www.toptal.com/developers/gitignore/api/ruby,c,visualstudiocode
