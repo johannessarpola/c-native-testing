@@ -3,7 +3,8 @@ name: Main
 on: [push]
 
 jobs:
-  build:
+  # Tests with ruby/bundle/rspec
+  build-rspec:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -18,3 +19,20 @@ jobs:
     - run: bundle install
     - name: run tests
       run: bundle exec rspec
+
+  # Tests with js/npm/Jest
+  build-jest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+    - uses: actions/checkout@v3
+    - name: install-deps
+      run: sudo apt-get update && sudo apt-get install build-essential
+    - name: build
+      run: gcc -o main main.c
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18
+    - run: npm install
+    - name: run tests
+      run: npm test
